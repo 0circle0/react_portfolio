@@ -12,7 +12,7 @@ function App() {
   return (
     <div className="App">
       <div className="page">
-        <div className="sidebar">
+        <div className="sidebar hideOnPrint">
           <NavMenu />
         </div>
         <main>

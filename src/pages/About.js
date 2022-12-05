@@ -14,7 +14,7 @@ export default function About() {
     `Later Unity3D and NodeJS Server/Client games became my passion. 
     I started to focus on backend services around 2020 during the pandemic learning Client side prediction, 
     Server validation, Input Validation, Credential validation, Session validation, Account creation, 
-    Email varification, Credential validation, State Machines, Rollback and History`];
+    Email verification, Credential validation, State Machines, Rollback and History`];
 
     let Languages = ["C/C++, C#, Java, JavaScript, HTML, CSS, SQL"]
     let Technologies = ["Azure DevOps, Microsoft SQL Server, Visual Studio, Rider, Unity3D, MongoDB, NodeJS"]

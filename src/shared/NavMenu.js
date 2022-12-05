@@ -10,7 +10,6 @@ export default function NavMenu() {
     }
 
     let NavMenuCssClass = collapseNavMenu ? "collapse" : "";
-
     return (
         <>
             <div className="top-row ps-3 navbar navbar-light shadow-lg">

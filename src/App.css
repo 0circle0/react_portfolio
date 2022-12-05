@@ -11,6 +11,22 @@
   object-fit: cover;
 }
 
+.nav-link {
+  color: #fff;
+}
+
+.nav-link:focus {
+  background-color: grey;
+  color:#fff;
+  border-radius: 4px;
+}
+
+.active{
+  font-size: 30px;
+  color: red;
+  border-bottom: 5px solid red;
+}
+
 .card {
   transition: transform 0.1s ease;
   box-shadow: 0 4px 6px 0 rgba(22, 22, 26, 0.18);
