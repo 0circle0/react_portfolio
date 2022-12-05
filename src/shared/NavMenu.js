@@ -1,17 +1,37 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import useWindowSize from "../components/WindowManager";
 import '../NavMenu.css'
 
 export default function NavMenu() {
 
     let [collapseNavMenu, setCollapseNavMenu] = useState(false);
+    let [containsCollapse, setContainsCollapse] = useState(false);
     function ToggleNavMenu() {
-        setCollapseNavMenu(!collapseNavMenu)
+        setCollapseNavMenu(!collapseNavMenu);
     }
 
-    let NavMenuCssClass = collapseNavMenu ? "collapse" : "";
+    let NavMenuCssClass = collapseNavMenu ? "collapseableMenu collapse" : "collapseableMenu";
+    let windowSize = useWindowSize();
+    let element = document.getElementsByClassName("collapseableMenu")[0];
+    if (element) {
+        if (windowSize[0] > 640 && containsCollapse) {
+            element.classList.remove('collapse')
+            setContainsCollapse(false);
+            setCollapseNavMenu(false);
+        }
+
+        if (windowSize[0] <= 640 && !containsCollapse) {
+
+            element.classList.add('collapse')
+            setContainsCollapse(true);
+            setCollapseNavMenu(true);
+        }
+    }
+
     return (
         <>
+
             <div className="top-row ps-3 navbar navbar-light shadow-lg">
                 <div className="container-fluid">
                     <a className="navbar-brand" href="/">Brian Paul Jensen II</a>
@@ -23,24 +43,24 @@ export default function NavMenu() {
             <div className={NavMenuCssClass}>
                 <nav className="flex-column" role="navigation">
                     <div className="nav-item px-3">
-                        <Link className="nav-link" to="/">
+                        <NavLink className="nav-link" to="/">
                             <span className="oi oi-folder" aria-hidden="true"></span> Portfolio
-                        </Link>
+                        </NavLink>
                     </div>
                     <div className="nav-item px-3">
-                        <Link className="nav-link" to="/resume">
+                        <NavLink className="nav-link" to="/resume">
                             <span className="oi oi-person" aria-hidden="true"></span> Resume
-                        </Link>
+                        </NavLink>
                     </div>
                     <div className="nav-item px-3">
-                        <Link className="nav-link" to="/about">
+                        <NavLink className="nav-link" to="/about">
                             <span className="oi oi-question-mark" aria-hidden="true"></span> About
-                        </Link>
+                        </NavLink>
                     </div>
                     <div className="nav-item px-3">
-                        <Link className="nav-link" to="/contactme">
+                        <NavLink className="nav-link" to="/contactme">
                             <span className="oi oi-envelope-open" aria-hidden="true"></span> Contact Me
-                        </Link>
+                        </NavLink>
                     </div>
                 </nav>
             </div>

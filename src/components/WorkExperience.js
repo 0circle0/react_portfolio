@@ -1,4 +1,4 @@
-import BoxGroupItems from "./BoxGrouItems"
+import BoxGroupItems from "./BoxGroupItems"
 import ListGroupItem from "./ListGroupItem"
 export default function WorkExperience() {
     let WalMartJob = [

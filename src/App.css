@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'Gill Sans Nova';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Gill Sans Nova'), url('https://fonts.cdnfonts.com/s/13921/5.- Gill Sans Nova Book.woff') format('woff');
+}
+
 .faceImg {
   width: 92px;
   height: 128px;
@@ -5,6 +12,48 @@
   border-radius: 0;
   border: 0;
   margin-bottom: 1.5em;
+}
+
+@media (min-width : 900px) {
+
+  .resumeDownload {
+      position: fixed;
+  }
+}
+
+h1 {
+  font-family: 'Gill Sans Nova';
+  font-weight: 600;
+}
+
+@media  (max-width : 899px) {
+  .resumeDownload {
+      display: flex;
+      margin: auto;
+      align-content: center;
+      justify-content: space-around;
+  }
+}
+
+@media (min-width: 450px),(max-width: 899px) {
+
+  .w-lg-25 {
+      width: 100% !important;
+  }
+}
+
+@media (min-width: 900px),(max-width: 1399) {
+
+  .w-lg-25 {
+      width: 50% !important;
+  }
+}
+
+@media (min-width: 1400px) {
+
+  .w-lg-25 {
+      width: 25% !important;
+  }
 }
 
 .card-img-top {
@@ -19,12 +68,6 @@
   background-color: grey;
   color:#fff;
   border-radius: 4px;
-}
-
-.active{
-  font-size: 30px;
-  color: red;
-  border-bottom: 5px solid red;
 }
 
 .card {
