@@ -31,7 +31,6 @@ export default function NavMenu() {
 
     return (
         <>
-
             <div className="top-row ps-3 navbar navbar-light shadow-lg">
                 <div className="container-fluid">
                     <a className="navbar-brand" href="/">Brian Paul Jensen II</a>
