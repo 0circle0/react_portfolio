@@ -1,4 +1,4 @@
-import CreateKey from "./CreateKey";
+import {CreateKey} from "./CreateKey";
 export default function UnorderedList(props) {
     let Title = props.Title
     let List = props.List
@@ -8,7 +8,7 @@ export default function UnorderedList(props) {
             <div className="d-flex justify-content-center">
                 <ul>
                     {List.map(item => {
-                        let key = CreateKey();
+                        let key = CreateKey(item);
                         return (
                             <li key={key}>{item}</li>
                         )

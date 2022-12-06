@@ -1,4 +1,4 @@
-import CreateKey from "./CreateKey";
+import {CreateKey} from "./CreateKey";
 export default function ListGroupItem(props) {
     let Title = props.Title
     let List = props.List
@@ -8,7 +8,7 @@ export default function ListGroupItem(props) {
             {Title}
             <ul>
                 {List.map((item) => {
-                    let key = CreateKey();
+                    let key = CreateKey(item);
                     return (
                     <li key={key}>{item}</li>
                     )
