@@ -35,6 +35,18 @@ h1 {
   }
 }
 
+@media (max-width: 1000px) {
+  .w-25 {
+    width:75% !important;
+  }
+}
+
+@media (min-width: 1001px) {
+  .w-25 {
+    width: 33% !important;
+  }
+}
+
 @media (min-width: 450px),(max-width: 899px) {
 
   .w-lg-25 {

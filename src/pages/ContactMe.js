@@ -1,4 +1,5 @@
 export default function ContactMe() {
+    document.title = "Contact Me";
     return (
         <div className="container w-25 text-center p-3 shadow-sm">
             <h3>Contact Me</h3>

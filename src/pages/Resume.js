@@ -16,7 +16,8 @@ export default function Resume() {
             elements[i].classList.remove("d-none");
     }
 
-    let showPrintButton = false;
+    let showPrintButton = true;
+    document.title = "Resume";
 
     return (
         <>

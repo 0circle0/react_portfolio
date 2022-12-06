@@ -19,6 +19,7 @@ export default function About() {
     let Languages = ["C/C++, C#, Java, JavaScript, HTML, CSS, SQL"]
     let Technologies = ["Azure DevOps, Microsoft SQL Server, Visual Studio, Rider, Unity3D, MongoDB, NodeJS"]
     let Frameworks = [".Net, Blazor/Razor, Java Swing, React"]
+    document.title = "About Me";
     return (
         <>
             <title>About Me</title>

@@ -30,6 +30,7 @@ export default function Index() {
     Link: "https://github.com/0circle0/Portfolio",
     SrcImage: "https://devblogs.microsoft.com/dotnet/wp-content/uploads/sites/10/2019/04/BrandBlazor_big_with_border.png"
   }
+  document.title = "Portfolio";
   return (
     <>
       <title>Portfolio</title>
