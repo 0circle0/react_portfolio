@@ -4,25 +4,25 @@ export default function Index() {
     Title: "Sprite Creator 3",
     Text: "Customizable Animated Sprite Character Generator. Exports animated sprite sheets for use in games and apps. GUI Themes",
     Link: "https://spritecreator.itch.io/spritecreator3",
-    SrcImage: "img/background2.png"
+    SrcImage: "%PUBLIC_URL%/img/background2.png"
   }
   let DiceCard = {
     Title: "Dice",
     Text: "Roll Customizable dice with multiple colors and menu options using Physics for WebGL, Desktop, and Android",
     Link: "https://spritecreator.itch.io/dice",
-    SrcImage: "img/Dice.png"
+    SrcImage: "%PUBLIC_URL%/img/Dice.png"
   }
   let WordCard = {
     Title: "Words",
     Text: "Type the words. Destroy the cubes. Keep track of your typing speed. Unity3D typing asset.",
     Link: "https://spritecreator.itch.io/words",
-    SrcImage: "img/Words.png"
+    SrcImage: "%PUBLIC_URL%/img/Words.png"
   }
   let GithubCard = {
     Title: "Github",
     Text: "C/C++, C#, JavaScript, Server/Client with NodeJS, Unity3D Client/Server",
     Link: "https://github.com/0circle0",
-    SrcImage: "img/Git-Hub-Mark.png"
+    SrcImage: "%PUBLIC_URL%/img/Git-Hub-Mark.png"
   }
   let BlazorCard = {
     Title: "Blazor",

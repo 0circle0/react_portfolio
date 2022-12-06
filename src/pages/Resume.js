@@ -31,7 +31,7 @@ export default function Resume() {
                 Address2="Cookeville TN 38501"
                 Email="jensen_305@yahoo.com"
                 LinkedIn="https://linkedin.com/in/circleworks/"
-                Image="img/face.jpg"
+                Image="%PUBLIC_URL%/img/face.jpg"
                 ImageTitle="Brian Jensen" />
 
             <Qualifications />
