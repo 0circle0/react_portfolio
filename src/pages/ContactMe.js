@@ -1,7 +1,7 @@
 export default function ContactMe() {
     document.title = "Contact Me";
     return (
-        <div className="container w-25 text-center p-3 shadow-sm">
+        <div className="container w-auto-75-33 text-center p-3 shadow-sm">
             <h3>Contact Me</h3>
             <form target="_blank" action="https://formsubmit.co/e8b687c7d61729756583878447522e19" method="POST">
 
