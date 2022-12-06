@@ -36,13 +36,13 @@ h1 {
 }
 
 @media (max-width: 1000px) {
-  .w-25 {
+  .w-auto-75-33 {
     width:75% !important;
   }
 }
 
 @media (min-width: 1001px) {
-  .w-25 {
+  .w-auto-75-33 {
     width: 33% !important;
   }
 }
