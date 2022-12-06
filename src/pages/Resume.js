@@ -23,7 +23,7 @@ export default function Resume() {
             <title>Resume</title>
 
             {showPrintButton && <button className="btn btn-primary hideOnPrint" type="button" onClick={Print}>Print</button>}
-            <a className="btn btn-primary hideOnPrint" href="https://download943.mediafire.com/srowos98onjg/uea2ls3m35nqb1p/Resume.pdf" target="_blank" download id="download">Download Resume</a>
+            <a className="btn btn-primary hideOnPrint" href="https://download943.mediafire.com/srowos98onjg/uea2ls3m35nqb1p/Resume.pdf" target="_blank" rel="noreferrer" download id="download">Download Resume</a>
             <h1 className="d-flex justify-content-center fw-bold mb-5 mb-lg-0" aria-label="name">Brian Paul Jensen II</h1>
 
             <PersonalInfo Address1="335 Clover Ave Apt 6"
