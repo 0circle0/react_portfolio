@@ -55,11 +55,13 @@
         display: none;
     }
 
-    .collapse {
+    div .collapseableMenu {
         /* Never collapse the sidebar for wide screens */
-        display: block;
+        display: block !important;
     }
+    
 }
+
 .page {
     position: relative;
     display: flex;

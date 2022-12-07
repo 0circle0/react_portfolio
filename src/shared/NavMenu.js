@@ -11,18 +11,10 @@ export default function NavMenu() {
         setCollapseNavMenu(!collapseNavMenu);
     }
 
-    let NavMenuCssClass = collapseNavMenu ? "collapseableMenu collapse" : "collapseableMenu";
     let windowSize = useWindowSize();
     let element = document.getElementsByClassName("collapseableMenu")[0];
     if (element) {
-        if (windowSize[0] > 640 && containsCollapse) {
-            element.classList.remove('collapse')
-            setContainsCollapse(false);
-            setCollapseNavMenu(false);
-        }
-
         if (windowSize[0] <= 640 && !containsCollapse) {
-
             element.classList.add('collapse')
             setContainsCollapse(true);
             setCollapseNavMenu(true);
@@ -39,7 +31,7 @@ export default function NavMenu() {
                     </button>
                 </div>
             </div>
-            <div className={NavMenuCssClass}>
+            <div className={collapseNavMenu ? "collapseableMenu collapse" : "collapseableMenu"}>
                 <nav className="flex-column" role="navigation">
                     <div className="nav-item px-3">
                         <NavLink className="nav-link" to="/">
