@@ -1,4 +1,5 @@
-export default function Card({ SrcImage, Link, Text, Title }) {
+export default function Card(props) {
+    let { SrcImage, Link, Text, Title } = props.Details
     return (
         <>
             <div className="card d-flex justify-content-center align-items-center flex-lg-row flex-md-column flex-sm-column w-75 m-auto">
