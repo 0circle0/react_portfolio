@@ -40,12 +40,12 @@ export default function Index() {
   }
   return (
     <>
-      <Card Title={SpriteCreatorCard.Title} Text={SpriteCreatorCard.Text} Link={SpriteCreatorCard.Link} SrcImage={SpriteCreatorCard.SrcImage} />
-      <Card Title={DiceCard.Title} Text={DiceCard.Text} Link={DiceCard.Link} SrcImage={DiceCard.SrcImage} />
-      <Card Title={WordCard.Title} Text={WordCard.Text} Link={WordCard.Link} SrcImage={WordCard.SrcImage} />
-      <Card Title={GithubCard.Title} Text={GithubCard.Text} Link={GithubCard.Link} SrcImage={GithubCard.SrcImage} />
-      <Card Title={ReactCard.Title} Text={ReactCard.Text} Link={ReactCard.Link} SrcImage={ReactCard.SrcImage} />
-      <Card Title={BlazorCard.Title} Text={BlazorCard.Text} Link={BlazorCard.Link} SrcImage={BlazorCard.SrcImage} />
+      <Card Details={SpriteCreatorCard} />
+      <Card Details={DiceCard} />
+      <Card Details={WordCard} />
+      <Card Details={GithubCard} />
+      <Card Details={ReactCard} />
+      <Card Details={BlazorCard} />
     </>
   );
 }
