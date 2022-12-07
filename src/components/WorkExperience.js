@@ -31,9 +31,14 @@ export default function WorkExperience() {
     ]
 
     let TarusMediaJob = [
-        "January 12 2015 - July 22 2022",
+        "January 12 2015 - May 12 2022",
         "Java Software Developer",
         "Developed internal prototype applications not released to the public"
+    ]
+
+    let SecuritasJob = [
+        "May 18 2022 - August 1 2022",
+        "California Licensed Security Officer"
     ]
 
     let SAICJob = [
@@ -45,6 +50,7 @@ export default function WorkExperience() {
     return (
         <BoxGroupItems Title="Experience">
             <ListGroupItem List={SAICJob} Title="SAIC Technology Integration Gateway" />
+            <ListGroupItem List={SecuritasJob} Title="Securitas USA" />
             <ListGroupItem List={TarusMediaJob} Title="Taurus Media LLC" />
             <ListGroupItem List={SpriteCreatorJob} Title="Sprite Creator By CircleWorks" />
             <ListGroupItem List={AmazonJob} Title="Amazon" />
