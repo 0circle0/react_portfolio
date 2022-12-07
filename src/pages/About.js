@@ -1,6 +1,8 @@
 import Paragraphs from "../components/Paragraphs";
 
 export default function About() {
+    document.title = "About Me";
+
     let AboutMe = [`Self taught programmer using books, stackoverflow.com, API Docs, and youtube videos. 
     My first language was QBASIC creating simple programs and giving more lives in Nibbles and Gorillas. 
     My first games were created with Allegro and C/C++ at 16.`,
@@ -16,20 +18,15 @@ export default function About() {
     Server validation, Input Validation, Credential validation, Session validation, Account creation, 
     Email verification, Credential validation, State Machines, Rollback and History`];
 
-    let Languages = ["C/C++, C#, Java, JavaScript, HTML, CSS, SQL"]
+    let Languages = ["C#, JavaScript, HTML, CSS, SQL, Java, C/C++"]
     let Technologies = ["Azure DevOps, Microsoft SQL Server, Visual Studio, Rider, Unity3D, MongoDB, NodeJS"]
     let Frameworks = [".Net, Blazor/Razor, Java Swing, React"]
-    document.title = "About Me";
     return (
         <>
-            <title>About Me</title>
             <Paragraphs Title="About Me" Data={AboutMe} />
-
-            <Paragraphs Title="Languages" Data={Languages} CenterData="true" />
-
-            <Paragraphs Title="Technologies" Data={Technologies} CenterData="true" />
-
-            <Paragraphs Title="Frameworks" Data={Frameworks} CenterData="true" />
+            <Paragraphs Title="Languages" Data={Languages} CenterData={true} />
+            <Paragraphs Title="Technologies" Data={Technologies} CenterData={true} />
+            <Paragraphs Title="Frameworks" Data={Frameworks} CenterData={true} />
         </>
     );
 }

@@ -1,6 +1,4 @@
-export default function BoxGroupItems(props) {
-    let Title = props.Title
-    let children = props.children
+export default function BoxGroupItems({Title, children }) {
     return (
         <div className="mt-5 mb-5">
             <h2 className="d-flex justify-content-center">{Title}</h2>

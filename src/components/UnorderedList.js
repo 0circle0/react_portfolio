@@ -1,7 +1,5 @@
 import {CreateKey} from "./CreateKey";
-export default function UnorderedList(props) {
-    let Title = props.Title
-    let List = props.List
+export default function UnorderedList({Title, List}) {
     return (
         <>
             <h2 className="d-flex justify-content-center">{Title}</h2>

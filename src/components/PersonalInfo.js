@@ -1,10 +1,4 @@
-export default function PersonalInfo(props) {
-    let Address1 = props.Address1
-    let Address2 = props.Address2
-    let LinkedIn = props.LinkedIn
-    let Email = props.Email
-    let ImageTitle = props.ImageTitle
-    let Image = props.Image
+export default function PersonalInfo({Address1, Address2, LinkedIn, Email, ImageTitle, Image}) {
     return (
         <div className="d-flex justify-content-between mb-5 mb-lg-0">
             <img src={Image} className="faceImg rounded" title={ImageTitle} alt=""/>

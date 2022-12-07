@@ -1,8 +1,5 @@
-import {CreateKey} from "./CreateKey";
-export default function ListGroupItem(props) {
-    let Title = props.Title
-    let List = props.List
-    
+import { CreateKey } from "./CreateKey";
+export default function ListGroupItem({ Title, List }) {
     return (
         <li className="list-group-item border">
             {Title}
@@ -10,7 +7,7 @@ export default function ListGroupItem(props) {
                 {List.map((item) => {
                     let key = CreateKey(item);
                     return (
-                    <li key={key}>{item}</li>
+                        <li key={key}>{item}</li>
                     )
                 }
                 )}
