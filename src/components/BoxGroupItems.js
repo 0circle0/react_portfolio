@@ -1,4 +1,4 @@
-export default function BoxGroupItems({Title, children }) {
+export default function BoxGroupItems({ Title, children }) {
     return (
         <div className="mt-5 mb-5">
             <h2 className="d-flex justify-content-center">{Title}</h2>

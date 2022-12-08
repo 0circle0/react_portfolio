@@ -1,7 +1,7 @@
-export default function PersonalInfo({Address1, Address2, LinkedIn, Email, ImageTitle, Image}) {
+export default function PersonalInfo({ Address1, Address2, LinkedIn, Email, ImageTitle, Image }) {
     return (
         <div className="d-flex justify-content-between mb-5 mb-lg-0">
-            <img src={Image} className="faceImg rounded" title={ImageTitle} alt=""/>
+            <img src={Image} className="faceImg rounded" title={ImageTitle} alt="" />
             <div className="d-inline-flex list-group justify-content-start">
                 <ul className="list-group">
                     <li className="email list-group-item">{Email}</li>

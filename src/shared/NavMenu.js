@@ -1,9 +1,9 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { NavLink } from "react-router-dom";
 import useWindowSize from "../components/WindowManager";
 import '../NavMenu.css'
-
-export default function NavMenu() {
+let [elem] = useRef(null);
+function NavMenu() {
 
     let [collapseNavMenu, setCollapseNavMenu] = useState(false);
     let [containsCollapse, setContainsCollapse] = useState(false);
@@ -13,11 +13,18 @@ export default function NavMenu() {
 
     let windowSize = useWindowSize();
     let element = document.getElementsByClassName("collapseableMenu")[0];
+    let [elem] = useRef(null);
     if (element) {
         if (windowSize[0] <= 640 && !containsCollapse) {
             element.classList.add('collapse')
             setContainsCollapse(true);
             setCollapseNavMenu(true);
+        }
+
+        if (windowSize[0] > 640 && containsCollapse) {
+            element.classList.remove('collapse');
+            setContainsCollapse(false);
+            setCollapseNavMenu(false);
         }
     }
 
@@ -31,7 +38,7 @@ export default function NavMenu() {
                     </button>
                 </div>
             </div>
-            <div className={collapseNavMenu ? "collapseableMenu collapse" : "collapseableMenu"}>
+            <div ref={elem} className={collapseNavMenu ? "collapseableMenu collapse" : "collapseableMenu"}>
                 <nav className="flex-column" role="navigation">
                     <div className="nav-item px-3">
                         <NavLink className="nav-link" to="/">
@@ -58,3 +65,5 @@ export default function NavMenu() {
         </>
     );
 }
+
+export { NavMenu, elem }

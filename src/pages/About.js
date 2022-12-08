@@ -7,13 +7,13 @@ export default function About() {
     My first language was QBASIC creating simple programs and giving more lives in Nibbles and Gorillas. 
     My first games were created with Allegro and C/C++ at 16.`,
 
-    `I released my first application August 1 2013 called Sprite Creator 3. 
+        `I released my first application August 1 2013 called Sprite Creator 3. 
     It was a free to use and share application that was created using Java Swing. 
     It started as a learning Java project that later was recreated with Unity3D. 
     Sprite Creator 3 has over 300k downloads in 100+ countries as the free version using Java. 
     The recreated Unity3D version was put on itch.io for purchase in 2020.`,
 
-    `Later Unity3D and NodeJS Server/Client games became my passion. 
+        `Later Unity3D and NodeJS Server/Client games became my passion. 
     I started to focus on backend services around 2020 during the pandemic learning Client side prediction, 
     Server validation, Input Validation, Credential validation, Session validation, Account creation, 
     Email verification, Credential validation, State Machines, Rollback and History`];

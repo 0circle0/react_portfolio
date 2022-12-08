@@ -18,7 +18,7 @@ function App() {
         <main>
           <article className="content">
             <Routes>
-              <Route path="/" >
+              <Route path="/">
                 <Route index element={<Index />} />
                 <Route path="about" element={<About />} />
                 <Route path="contactme" element={<ContactMe />} />
@@ -28,7 +28,7 @@ function App() {
           </article>
         </main>
         <Outlet />
-      </div >
+      </div>
 
     </div>
   );

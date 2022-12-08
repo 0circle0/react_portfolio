@@ -1,7 +1,7 @@
 import Card from '../components/Card'
 export default function Index() {
   document.title = "Portfolio";
-  
+
   let SpriteCreatorCard = {
     Title: "Sprite Creator 3",
     Text: "Customizable Animated Sprite Character Generator. Exports animated sprite sheets for use in games and apps. GUI Themes",

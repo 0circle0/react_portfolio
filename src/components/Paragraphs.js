@@ -1,4 +1,4 @@
-import {CreateKey} from "./CreateKey";
+import { CreateKey } from "./CreateKey";
 export default function Paragraphs({ Title, Data, CenterData }) {
     let items = Data.map((item) => {
         let key = CreateKey(item);
@@ -12,6 +12,6 @@ export default function Paragraphs({ Title, Data, CenterData }) {
                 <h1 className="text-center">{Title}</h1>
                 {items}
             </div>
-        </div >
+        </div>
     );
 }
