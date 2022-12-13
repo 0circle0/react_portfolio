@@ -38,6 +38,12 @@ export default function Index() {
     Link: "https://github.com/0circle0/react_portfolio",
     SrcImage: "/logo192.png"
   }
+  let ReactCardTS = {
+    Title: "React",
+    Text: "This site was created with React 18 with TypeScript and Bootstrap 5 view the source code on Github",
+    Link: "https://github.com/0circle0/react_Portfolio_TS",
+    SrcImage: "/logo192.png"
+  }
   return (
     <>
       <Card Details={SpriteCreatorCard} />
@@ -45,6 +51,7 @@ export default function Index() {
       <Card Details={WordCard} />
       <Card Details={GithubCard} />
       <Card Details={ReactCard} />
+      <Card Details={ReactCardTS} />
       <Card Details={BlazorCard} />
     </>
   );
