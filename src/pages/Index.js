@@ -34,13 +34,13 @@ export default function Index() {
   }
   let ReactCard = {
     Title: "React",
-    Text: "This site was created with React 17 and Bootstrap 5 view the source code on Github",
+    Text: "This site was created with React 18 with JavaScipt and Bootstrap 5 view the source code on Github",
     Link: "https://github.com/0circle0/react_portfolio",
     SrcImage: "/logo192.png"
   }
   let ReactCardTS = {
     Title: "React",
-    Text: "This site was created with React 18 with TypeScript and Bootstrap 5 view the source code on Github",
+    Text: "This site was also created with React 18 with TypeScript and Bootstrap 5 view the source code on Github",
     Link: "https://github.com/0circle0/react_Portfolio_TS",
     SrcImage: "/logo192.png"
   }
