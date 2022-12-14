@@ -1,4 +1,3 @@
-import { CreateKey } from "./CreateKey";
 export default function UnorderedList({ Title, List }) {
     return (
         <>
@@ -6,9 +5,8 @@ export default function UnorderedList({ Title, List }) {
             <div className="d-flex justify-content-center">
                 <ul>
                     {List.map(item => {
-                        let key = CreateKey(item);
                         return (
-                            <li key={key}>{item}</li>
+                            <li key={item}>{item}</li>
                         )
                     }
                     )}

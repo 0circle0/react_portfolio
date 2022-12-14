@@ -1,9 +1,7 @@
-import { CreateKey } from "./CreateKey";
 export default function Paragraphs({ Title, Data, CenterData }) {
     let items = Data.map((item) => {
-        let key = CreateKey(item);
         return (
-            <p key={key}>{item}</p>
+            <p key={item}>{item}</p>
         )
     });
     return (
