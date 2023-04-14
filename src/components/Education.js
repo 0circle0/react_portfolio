@@ -1,10 +1,16 @@
-import BoxGroupItems from "./BoxGrouItems";
+import { memo, useMemo } from "react";
+import getEducationData from "../functions/getEducationData";
+import BoxGroupItems from "./BoxGroupItems";
 import ListGroupItem from "./ListGroupItem";
-export default function Education() {
-    let HighSchool = ["Kenosha Unified, Kenosha WI", "Graduation with DIploma December 2002"];
+
+const Education = () => {
+    const HighSchool = useMemo(() => getEducationData(), []);
+
     return (
         <BoxGroupItems Title="Education">
             <ListGroupItem List={HighSchool} Title="High School" />
         </BoxGroupItems>
     );
 }
+
+export default memo(Education);

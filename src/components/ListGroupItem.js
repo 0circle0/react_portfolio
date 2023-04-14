@@ -1,20 +1,17 @@
-import CreateKey from "./CreateKey";
-export default function ListGroupItem(props) {
-    let Title = props.Title
-    let List = props.List
-    
+import { memo, useMemo } from "react";
+import { CreateKey } from "../functions/createKey";
+
+const ListGroupItem = ({ Title, List }) => {
+    let keys = useMemo(() => List.map((item) => CreateKey(item)), [List])
+
     return (
         <li className="list-group-item border">
             {Title}
             <ul>
-                {List.map((item) => {
-                    let key = CreateKey();
-                    return (
-                    <li key={key}>{item}</li>
-                    )
-                }
-                )}
+                {List.map((item, index) => <li key={keys[index]}>{item}</li>)}
             </ul>
         </li>
     );
 }
+
+export default memo(ListGroupItem);
