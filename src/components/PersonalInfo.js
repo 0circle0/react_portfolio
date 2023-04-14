@@ -1,7 +1,8 @@
-export default function PersonalInfo({Address1, Address2, LinkedIn, Email, ImageTitle, Image}) {
+import { memo } from "react";
+
+const PersonalInfo = ({ Address1, Address2, LinkedIn, Email }) => {
     return (
         <div className="d-flex justify-content-between mb-5 mb-lg-0">
-            <img src={Image} className="faceImg rounded" title={ImageTitle} alt=""/>
             <div className="d-inline-flex list-group justify-content-start">
                 <ul className="list-group">
                     <li className="email list-group-item">{Email}</li>
@@ -22,3 +23,5 @@ export default function PersonalInfo({Address1, Address2, LinkedIn, Email, Image
         </div>
     );
 }
+
+export default memo(PersonalInfo);

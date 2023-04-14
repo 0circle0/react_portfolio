@@ -1,25 +1,30 @@
-import { useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { NavLink } from "react-router-dom";
-import useWindowSize from "../components/WindowManager";
-import '../NavMenu.css'
+import useWindowSize from "../../hooks/useWindowSize";
+import './NavMenu.css'
 
-export default function NavMenu() {
+const NavMenu = () => {
 
-    let [collapseNavMenu, setCollapseNavMenu] = useState(false);
-    let [containsCollapse, setContainsCollapse] = useState(false);
-    function ToggleNavMenu() {
+    const [collapseNavMenu, setCollapseNavMenu] = useState(false);
+    const [containsCollapse, setContainsCollapse] = useState(false);
+
+    const ToggleNavMenu = useCallback(() => {
         setCollapseNavMenu(!collapseNavMenu);
-    }
+    }, [collapseNavMenu, setCollapseNavMenu])
 
-    let windowSize = useWindowSize();
-    let element = document.getElementsByClassName("collapseableMenu")[0];
-    if (element) {
-        if (windowSize[0] <= 640 && !containsCollapse) {
-            element.classList.add('collapse')
-            setContainsCollapse(true);
-            setCollapseNavMenu(true);
+    const windowSize = useWindowSize();
+    const element = useMemo(() => document.getElementsByClassName("collapseableMenu")[0], []);
+
+    useEffect(()=> {
+        if (element) {
+            if (windowSize[0] <= 640 && !containsCollapse) {
+                element.classList.add('collapse')
+                setContainsCollapse(true);
+                setCollapseNavMenu(true);
+            }
         }
-    }
+    },[containsCollapse, element, windowSize]);
+    
 
     return (
         <>
@@ -58,3 +63,5 @@ export default function NavMenu() {
         </>
     );
 }
+
+export default NavMenu;

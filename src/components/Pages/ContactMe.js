@@ -1,4 +1,4 @@
-export default function ContactMe() {
+const ContactMe = () => {
     document.title = "Contact Me";
     return (
         <div className="container w-auto-75-33 text-center p-3 shadow-sm">
@@ -29,3 +29,5 @@ export default function ContactMe() {
 
     );
 }
+
+export default ContactMe;

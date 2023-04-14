@@ -1,4 +1,6 @@
-export default function BoxGroupItems({Title, children }) {
+import {memo} from "react";
+
+const BoxGroupItems = ({Title, children }) => {
     return (
         <div className="mt-5 mb-5">
             <h2 className="d-flex justify-content-center">{Title}</h2>
@@ -10,3 +12,5 @@ export default function BoxGroupItems({Title, children }) {
         </div>
     );
 }
+
+export default memo(BoxGroupItems);

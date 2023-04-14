@@ -1,13 +1,14 @@
 import './App.css';
 import * as React from 'react'
 import { Routes, Route, Outlet } from 'react-router-dom'
-import Index from './pages/Index'
-import About from './pages/About'
-import ContactMe from './pages/ContactMe'
-import Resume from './pages/Resume'
-import NavMenu from './shared/NavMenu';
+import Home from './components/Pages/Home';
+import About from './components/Pages/About';
+import ContactMe from './components/Pages/ContactMe';
+import Resume from './components/Pages/Resume';
+import NavMenu from './components/NavMenu/NavMenu';
 
-function App() {
+
+const App =() => {
 
   return (
     <div className="App">
@@ -19,7 +20,7 @@ function App() {
           <article className="content">
             <Routes>
               <Route path="/" >
-                <Route index element={<Index />} />
+                <Route index element={<Home />} />
                 <Route path="about" element={<About />} />
                 <Route path="contactme" element={<ContactMe />} />
                 <Route path="resume" element={<Resume />} />

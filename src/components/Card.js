@@ -1,5 +1,13 @@
-export default function Card(props) {
-    let { SrcImage, Link, Text, Title } = props.Details
+import { memo, useMemo } from "react";
+
+const Card = (props) => {
+    const { 
+        SrcImage, 
+        Link, 
+        Text, 
+        Title 
+    } = useMemo(() => props.Details, [props]);
+
     return (
         <>
             <div className="card d-flex justify-content-center align-items-center flex-lg-row flex-md-column flex-sm-column w-75 m-auto">
@@ -15,3 +23,5 @@ export default function Card(props) {
         </>
     );
 }
+
+export default memo(Card);
