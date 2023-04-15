@@ -1,9 +1,8 @@
-import { memo, useMemo } from "react";
+import { memo, useEffect, useMemo } from "react";
 import getAboutMeData from "../../functions/getAboutMeData";
 import Paragraphs from "../Paragraphs";
 
 const About = () => {
-    document.title = "About Me";
 
     const {
         aboutMe,
@@ -11,6 +10,10 @@ const About = () => {
         technologies,
         frameworks
     } = useMemo(() => getAboutMeData(), []);
+
+    useEffect(() => {
+        document.title = "About Me";
+    }, [])
 
     return (
         <>

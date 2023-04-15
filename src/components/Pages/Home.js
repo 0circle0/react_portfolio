@@ -1,9 +1,8 @@
-import { memo, useMemo } from 'react';
+import { memo, useEffect, useMemo } from 'react';
 import Card from '../Card'
 import getCardData from '../../functions/getCardData';
 
 const Home = () => {
-  document.title = "Portfolio";
 
   const {
     reactCard,
@@ -13,6 +12,10 @@ const Home = () => {
     diceCard,
     spriteCreatorCard
   } = useMemo(() => getCardData(), []);
+
+  useEffect(() => {
+    document.title = "Portfolio";
+  }, [])
 
   return (
     <>

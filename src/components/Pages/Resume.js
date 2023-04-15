@@ -4,22 +4,28 @@ import Skills from '../Skills'
 import Qualifications from '../Qualifications'
 import PersonalInfo from '../PersonalInfo'
 import Certs from '../Certs'
-import { useCallback } from 'react'
+import { useCallback, useEffect } from 'react'
 
 const Resume = () => {
-    document.title = "Resume";
 
-    const Print = useCallback(() => {
-        const elements = document.getElementsByClassName("hideOnPrint");
-        const arrayOfElements = Array.from(elements);
+    const arrayOfElements = useMemo(() => {
+        const elements = document.getElementsByClassName("hideOnPrint")
+        return Array.from(elements)
+    }, []);
+
+    const print = useCallback(() => {
         arrayOfElements.forEach((e) => e.classList.add("d-none"));
         window.print();
         arrayOfElements.forEach((e) => e.classList.remove("d-none"));
-    }, []);
+    }, [arrayOfElements]);
+
+    useEffect(() => {
+        document.title = "Resume";
+    }, [])
 
     return (
         <>
-            <button className="btn btn-primary hideOnPrint" type="button" onClick={Print}>Print</button>
+            <button className="btn btn-primary hideOnPrint" type="button" onClick={print}>Print</button>
             <h1 className="d-flex justify-content-center fw-bold mb-5 mb-lg-0" aria-label="name">Brian Paul Jensen II</h1>
 
             <PersonalInfo
