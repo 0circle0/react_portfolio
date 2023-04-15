@@ -20,9 +20,7 @@ const NavMenu = () => {
             </div>
             <div className={collapseNavMenu ? "collapseableMenu collapse" : "collapseableMenu"}>
                 <nav className="flex-column" role="navigation">
-                    {navItems.map(({ to, name, icon }) => {
-                        return <NavItem to={to} name={name} icon={icon} />
-                    })}
+                    {navItems.map(({ to, name, icon }) => <NavItem to={to} name={name} icon={icon} />)}
                 </nav>
             </div>
         </>
