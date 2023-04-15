@@ -4,14 +4,7 @@ import getCardData from '../../functions/getCardData';
 
 const Home = () => {
 
-  const {
-    reactCard,
-    blazorCard,
-    githubCard,
-    wordCard,
-    diceCard,
-    spriteCreatorCard
-  } = useMemo(() => getCardData(), []);
+  const cards = useMemo(() => getCardData(), []);
 
   useEffect(() => {
     document.title = "Portfolio";
@@ -19,12 +12,7 @@ const Home = () => {
 
   return (
     <>
-      <Card details={spriteCreatorCard} />
-      <Card details={diceCard} />
-      <Card details={wordCard} />
-      <Card details={githubCard} />
-      <Card details={reactCard} />
-      <Card details={blazorCard} />
+      {cards.map((card) => <Card key={card.id} details={card} />)}
     </>
   );
 }

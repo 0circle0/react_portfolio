@@ -4,7 +4,7 @@ import Skills from '../Skills'
 import Qualifications from '../Qualifications'
 import PersonalInfo from '../PersonalInfo'
 import Certs from '../Certs'
-import { useCallback, useEffect } from 'react'
+import { useCallback, useEffect, useMemo } from 'react'
 
 const Resume = () => {
 

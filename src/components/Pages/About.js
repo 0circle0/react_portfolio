@@ -4,12 +4,7 @@ import Paragraphs from "../Paragraphs";
 
 const About = () => {
 
-    const {
-        aboutMe,
-        languages,
-        technologies,
-        frameworks
-    } = useMemo(() => getAboutMeData(), []);
+    const tiles = useMemo(() => getAboutMeData(), []);
 
     useEffect(() => {
         document.title = "About Me";
@@ -17,10 +12,9 @@ const About = () => {
 
     return (
         <>
-            <Paragraphs title="About Me" data={aboutMe} />
-            <Paragraphs title="Languages" data={languages} centerData />
-            <Paragraphs title="Technologies" data={technologies} centerData />
-            <Paragraphs title="Frameworks" data={frameworks} centerData />
+            {tiles.map(({ id, data, centerData }) =>
+                <Paragraphs key={id} title="About Me" data={data} centerData={centerData} />
+            )}
         </>
     );
 }
