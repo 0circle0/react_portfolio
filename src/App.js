@@ -1,14 +1,13 @@
 import './App.css';
-import * as React from 'react'
+import React, { useMemo } from 'react'
 import { Routes, Route, Outlet } from 'react-router-dom'
-import Home from './components/Pages/Home';
-import About from './components/Pages/About';
-import ContactMe from './components/Pages/ContactMe';
-import Resume from './components/Pages/Resume';
 import NavMenu from './components/NavMenu/NavMenu';
+import getNavItems from './functions/getNavItems';
 
 
-const App =() => {
+const App = () => {
+
+  const routes = useMemo(() => getNavItems(), []);
 
   return (
     <div className="App">
@@ -20,10 +19,7 @@ const App =() => {
           <article className="content">
             <Routes>
               <Route path="/" >
-                <Route index element={<Home />} />
-                <Route path="about" element={<About />} />
-                <Route path="contactme" element={<ContactMe />} />
-                <Route path="resume" element={<Resume />} />
+                {routes.map(({ element, path }) => <Route index={path.length === 0} path={path} element={element} />)}
               </Route>
             </Routes>
           </article>

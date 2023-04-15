@@ -1,14 +1,14 @@
 import { memo, useMemo } from "react";
-import { CreateKey } from "../functions/createKey";
+import CreateKey from "../functions/createKey";
 
-const ListGroupItem = ({ Title, List }) => {
-    let keys = useMemo(() => List.map((item) => CreateKey(item)), [List])
+const ListGroupItem = ({ title, list }) => {
+    let keys = useMemo(() => list.map((item) => CreateKey(item)), [list])
 
     return (
         <li className="list-group-item border">
-            {Title}
+            {title}
             <ul>
-                {List.map((item, index) => <li key={keys[index]}>{item}</li>)}
+                {list.map((item, index) => <li key={keys[index]}>{item}</li>)}
             </ul>
         </li>
     );

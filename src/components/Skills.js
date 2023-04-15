@@ -4,9 +4,9 @@ import getSkillsData from "../functions/getSkillsData";
 
 const Skills = () => {
     const {
-        LanguageSkills,
-        PrimarySkills,
-        SecondarySkills
+        languageSkills,
+        primarySkills,
+        secondarySkills
     } = useMemo(() => getSkillsData(), []);
 
     return (
@@ -14,9 +14,9 @@ const Skills = () => {
             <h2 className="d-flex justify-content-center">Skills</h2>
             <div className="d-flex justify-content-center">
                 <div className="flex-column gap-3 d-flex align-items-center">
-                    <ListGroup List={LanguageSkills} />
-                    <ListGroup List={PrimarySkills} />
-                    <ListGroup List={SecondarySkills} />
+                    <ListGroup list={languageSkills} />
+                    <ListGroup list={primarySkills} />
+                    <ListGroup list={secondarySkills} />
                 </div>
             </div>
         </div>

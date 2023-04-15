@@ -6,22 +6,22 @@ const Home = () => {
   document.title = "Portfolio";
 
   const {
-    ReactCard,
-    BlazorCard,
-    GithubCard,
-    WordCard,
-    DiceCard,
-    SpriteCreatorCard
+    reactCard,
+    blazorCard,
+    githubCard,
+    wordCard,
+    diceCard,
+    spriteCreatorCard
   } = useMemo(() => getCardData(), []);
 
   return (
     <>
-      <Card Details={SpriteCreatorCard} />
-      <Card Details={DiceCard} />
-      <Card Details={WordCard} />
-      <Card Details={GithubCard} />
-      <Card Details={ReactCard} />
-      <Card Details={BlazorCard} />
+      <Card details={spriteCreatorCard} />
+      <Card details={diceCard} />
+      <Card details={wordCard} />
+      <Card details={githubCard} />
+      <Card details={reactCard} />
+      <Card details={blazorCard} />
     </>
   );
 }

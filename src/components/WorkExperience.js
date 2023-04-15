@@ -5,24 +5,24 @@ import ListGroupItem from "./ListGroupItem"
 
 const WorkExperience = () => {
     const {
-        SAICJob,
-        SecuritasJob,
-        TarusMediaJob,
-        SpriteCreatorJob,
-        AmazonJob,
-        ComputerTechJob,
-        WalMartJob
+        saicJob,
+        securitasJob,
+        tarusMediaJob,
+        spriteCreatorJob,
+        amazonJob,
+        computerTechJob,
+        walMartJob
     } = useMemo(() => getExperienceData(), []);
 
     return (
-        <BoxGroupItems Title="Experience">
-            <ListGroupItem List={SAICJob} Title="SAIC Technology Integration Gateway" />
-            <ListGroupItem List={SecuritasJob} Title="Securitas USA" />
-            <ListGroupItem List={TarusMediaJob} Title="Taurus Media LLC" />
-            <ListGroupItem List={SpriteCreatorJob} Title="Sprite Creator By CircleWorks" />
-            <ListGroupItem List={AmazonJob} Title="Amazon" />
-            <ListGroupItem List={ComputerTechJob} Title="Computer Technician" />
-            <ListGroupItem List={WalMartJob} Title="Wal-Mart" />
+        <BoxGroupItems title="Experience">
+            <ListGroupItem list={saicJob} title="SAIC Technology Integration Gateway" />
+            <ListGroupItem list={securitasJob} title="Securitas USA" />
+            <ListGroupItem list={tarusMediaJob} title="Taurus Media LLC" />
+            <ListGroupItem list={spriteCreatorJob} title="Sprite Creator By CircleWorks" />
+            <ListGroupItem list={amazonJob} title="Amazon" />
+            <ListGroupItem list={computerTechJob} title="Computer Technician" />
+            <ListGroupItem list={walMartJob} title="Wal-Mart" />
         </BoxGroupItems>
     );
 }

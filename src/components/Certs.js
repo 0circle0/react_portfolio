@@ -4,8 +4,8 @@ import ListGroupItem from "./ListGroupItem";
 
 const Certs = () => {
     return (
-        <BoxGroupItems Title="Certifications">
-            <ListGroupItem List={["Expires 10/17/2025"]} Title="Security+ 601" />
+        <BoxGroupItems title="Certifications">
+            <ListGroupItem list={["Expires 10/17/2025"]} title="Security+ 601" />
         </BoxGroupItems>
     );
 }

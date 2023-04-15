@@ -1,22 +1,22 @@
 import { memo } from "react";
 
-const PersonalInfo = ({ Address1, Address2, LinkedIn, Email }) => {
+const PersonalInfo = ({ address1, address2, linkedIn, email }) => {
     return (
         <div className="d-flex justify-content-between mb-5 mb-lg-0">
             <div className="d-inline-flex list-group justify-content-start">
                 <ul className="list-group">
-                    <li className="email list-group-item">{Email}</li>
+                    <li className="email list-group-item">{email}</li>
                 </ul>
                 <ul className="list-group border-0">
                     <li className="list-group-item">
-                        {Address1}
+                        {address1}
                         <br />
-                        {Address2}
+                        {address2}
                     </li>
                 </ul>
                 <ul className="list-group">
                     <li className="list-group-item">
-                        <a href={LinkedIn}>LinkedIn</a>
+                        <a href={linkedIn}>LinkedIn</a>
                     </li>
                 </ul>
             </div>

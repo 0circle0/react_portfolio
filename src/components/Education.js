@@ -4,11 +4,11 @@ import BoxGroupItems from "./BoxGroupItems";
 import ListGroupItem from "./ListGroupItem";
 
 const Education = () => {
-    const HighSchool = useMemo(() => getEducationData(), []);
+    const highSchool = useMemo(() => getEducationData(), []);
 
     return (
-        <BoxGroupItems Title="Education">
-            <ListGroupItem List={HighSchool} Title="High School" />
+        <BoxGroupItems title="Education">
+            <ListGroupItem list={highSchool} title="High School" />
         </BoxGroupItems>
     );
 }
